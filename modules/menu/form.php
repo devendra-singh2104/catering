@@ -1,5 +1,5 @@
 <?php
-
+mustlogin();
 $obj=DB('menu');
 if($uid){
     $info=$obj->find($uid);

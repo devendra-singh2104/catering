@@ -1,4 +1,5 @@
 <?php
-session_destroy();
+mustlogin();
+Session::destroy();
 redirect('users');
 ?>

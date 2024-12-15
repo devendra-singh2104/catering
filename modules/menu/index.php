@@ -1,4 +1,5 @@
 <?php
+mustlogin();
 $data= db('menu')->all();
 if(isset($_POST['del'])){
     $delid=implode(",",$_POST['del']);

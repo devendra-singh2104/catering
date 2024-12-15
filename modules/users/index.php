@@ -1,4 +1,8 @@
 <?php
+   if(Session::get('logindtl')){
+    redirect('menu');
+    exit;
+}
 $error=null;
 if(isset($_POST['username'])){
    

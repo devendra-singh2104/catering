@@ -22,33 +22,43 @@
 <li class="nav-item">
 <a class="nav-link active" aria-current="page" href="#">Home</a>
 </li>
-
+<li class="nav-item">
+<a class="nav-link active" aria-current="page" href="<?=ROOT?>menu/display">Menu</a>
+</li>
+<?php if(Session::get('logindtl')){?>
 <li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 Menu
 </a>
 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-<li><a class="dropdown-item" href="<?=ROOT?>/menu/form">Add Menu</a></li>
-<li><a class="dropdown-item" href="<?=ROOT?>/menu">Show Menu</a></li>
+<li><a class="dropdown-item" href="<?=ROOT?>menu/form">Add Menu</a></li>
+<li><a class="dropdown-item" href="<?=ROOT?>menu">Show Menu</a></li>
 </ul>
 </li>
 <li class="nav-item">
 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
 </li>
 </ul>
-
+<ul style="list-style-type: none;">
 <li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-Admin
+
+            <img src="profile logo.png" alt="Profile Logo" class="profile-logo" width="30" height="30">
+            <span class="name">Admin</span>
+       
 </a>
-<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+<ol class="dropdown-menu" aria-labelledby="navbarDropdown" style="list-style-type: none;">
 <li><a class="dropdown-item" href="#">Profile</a></li>
-<li><a class="dropdown-item" href="<?=ROOT?>/users/logout.php">Logout</a></li>
-</ul>
+<li><a class="dropdown-item" href="<?=ROOT?>/users/logout">Logout</a></li>
+<?php } else{?>
+  <li class="nav-item">
+<a class="nav-link active" aria-current="page" href="<?=ROOT?>/users">Login</a>
 </li>
+<?php }?>
 
+</ol>
+</li>
 </ul>
-
 </div>
 </div>
 </nav>
