@@ -20,7 +20,7 @@ function DB($table,$pk='id'){
                 $sql.="$colname='". addslashes($value)."',";
        
         }
-        echo  $sql=substr($sql,0,-1).$wh;
+          $sql=substr($sql,0,-1).$wh;
         if($this->query($sql)){
             return $id??$this->insert_id;
 
@@ -33,6 +33,14 @@ public function all($cols="*",$order=""){
     }
    $sql="select $cols from $this->table order by $order";
    return $this->query($sql)?->fetch_all(MYSQLI_ASSOC);
+}
+
+public function custom($sql,$fetch=1){
+  
+   if($fetch)
+   return $this->query($sql)?->fetch_all(MYSQLI_ASSOC);
+   return $this->query($sql)?->fetch_assoc();
+
 }
 
 public function find($id,$cols="*"){
