@@ -22,6 +22,7 @@
 <li class="nav-item">
 <a class="nav-link active" aria-current="page" href="#">Home</a>
 </li>
+<?php if(!Session::get('logindtl')){?>
 <li class="nav-item">
 <a class="nav-link active" aria-current="page" href="<?=ROOT?>menu/display">Menu</a>
 </li>
@@ -37,18 +38,16 @@
 </a>
 <ol class="dropdown-menu" aria-labelledby="navbarDropdown" style="list-style-type: none;">
 <li><a class="dropdown-item" href="#">Profile</a></li>
-<li><a class="dropdown-item" href="<?=ROOT?>/users/logout">Logout</a></li>
+<li><a class="dropdown-item" href="<?=ROOT?>/users">Login</a></li>
 
-  <li class="nav-item">
-<a class="nav-link active" aria-current="page" href="<?=ROOT?>/users">Login</a>
-</li>
+  
 
 
 </ol>
 </li>
 </ul>
 
-
+<?php }?>
 
 <?php if(Session::get('logindtl')){?>
 <li class="nav-item dropdown">
@@ -75,11 +74,8 @@ Menu
 <ol class="dropdown-menu" aria-labelledby="navbarDropdown" style="list-style-type: none;">
 <li><a class="dropdown-item" href="#">Profile</a></li>
 <li><a class="dropdown-item" href="<?=ROOT?>/users/logout">Logout</a></li>
-<?php } else{?>
-  <!-- <li class="nav-item">
-<a class="nav-link active" aria-current="page" href="<?=ROOT?>/users">Login</a>
-</li> -->
-<?php }?>
+<?php } ?>
+
 
 </ol>
 </li>
