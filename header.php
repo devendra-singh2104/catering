@@ -38,7 +38,7 @@
 </a>
 <ol class="dropdown-menu" aria-labelledby="navbarDropdown" style="list-style-type: none;">
 <li><a class="dropdown-item" href="#">Profile</a></li>
-<li><a class="dropdown-item" href="<?=ROOT?>/users">Login</a></li>
+<li><a class="dropdown-item" href="<?=ROOT?>users">Login</a></li>
 
   
 
@@ -73,7 +73,7 @@ Menu
 </a>
 <ol class="dropdown-menu" aria-labelledby="navbarDropdown" style="list-style-type: none;">
 <li><a class="dropdown-item" href="#">Profile</a></li>
-<li><a class="dropdown-item" href="<?=ROOT?>/users/logout">Logout</a></li>
+<li><a class="dropdown-item" href="<?=ROOT?>users/logout">Logout</a></li>
 <?php } ?>
 
 
