@@ -25,6 +25,31 @@
 <li class="nav-item">
 <a class="nav-link active" aria-current="page" href="<?=ROOT?>menu/display">Menu</a>
 </li>
+
+
+<ul style="list-style-type: none; margin: 0; padding: 0; display: flex; justify-content: flex-end;">
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+            <img src="profile logo.png" alt="Profile Logo" class="profile-logo" width="30" height="30">
+            <span class="name">Admin</span>
+       
+</a>
+<ol class="dropdown-menu" aria-labelledby="navbarDropdown" style="list-style-type: none;">
+<li><a class="dropdown-item" href="#">Profile</a></li>
+<li><a class="dropdown-item" href="<?=ROOT?>/users/logout">Logout</a></li>
+
+  <li class="nav-item">
+<a class="nav-link active" aria-current="page" href="<?=ROOT?>/users">Login</a>
+</li>
+
+
+</ol>
+</li>
+</ul>
+
+
+
 <?php if(Session::get('logindtl')){?>
 <li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -51,9 +76,9 @@ Menu
 <li><a class="dropdown-item" href="#">Profile</a></li>
 <li><a class="dropdown-item" href="<?=ROOT?>/users/logout">Logout</a></li>
 <?php } else{?>
-  <li class="nav-item">
+  <!-- <li class="nav-item">
 <a class="nav-link active" aria-current="page" href="<?=ROOT?>/users">Login</a>
-</li>
+</li> -->
 <?php }?>
 
 </ol>
