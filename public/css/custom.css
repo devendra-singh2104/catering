@@ -23,9 +23,9 @@ body{
 }
 
 .cont{
-  width: 70%;
-  padding: 5px;
-  margin: 10px auto;
+  width: 40%;
+  padding: 10px;
+  margin: 130px auto;
   box-shadow: 1px 1px 5px #334;
   border-radius: 7px;
 }
